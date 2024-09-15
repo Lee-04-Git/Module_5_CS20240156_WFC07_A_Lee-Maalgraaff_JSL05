@@ -36,6 +36,12 @@ const generatePlaylist = (guardians, songs) => {
 
         const playlist = songs.filter(song => song.genre === preferredGenre);
 
+        const playlistDetails = {
+            guardianName: guardianName,
+            playlist: playlist
+        };
+
+        return playlistDetails;
     })
 
 }
