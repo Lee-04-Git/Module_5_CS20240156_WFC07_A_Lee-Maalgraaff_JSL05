@@ -59,7 +59,12 @@ const generatePlaylist = (guardians, songs) => {
         const songsList = playlist
         .map(song => `- ${song.title} by ${song.artist}`)
         .join('\n');
-    })
+
+        const playlistString = `Playlist for ${guardianName}:\n${songsList}`;
+        return playlistString;
+    }).join('\n\n');
+
+    console.log(displayPlaylists);
 
 
 
