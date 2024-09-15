@@ -68,7 +68,7 @@ const generatePlaylist = (guardians, songs) => {
         // Return the combined string
         return playlistString;
 
-    }).join('\n\n');
+    }).join('\n\n'); // Separate each Guardian's playlist with a blank line
 
     // Print all the playlists to the console
     console.log(displayPlaylists);
