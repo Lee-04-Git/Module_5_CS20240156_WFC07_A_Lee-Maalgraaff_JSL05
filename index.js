@@ -56,14 +56,21 @@ const generatePlaylist = (guardians, songs) => {
     const playlists = generatePlaylist(guardians, songs);
 
     const displayPlaylists = playlists.map(({guardianName, playlist}) => {
-        const songsList = playlist
-        .map(song => `- ${song.title} by ${song.artist}`)
-        .join('\n');
 
+        // Create a list of songs, each on a new line
+        const songsList = playlist
+        .map(song => `- ${song.title} by ${song.artist}`) // Format each song
+        .join('\n'); // Combine all songs into one string with new lines
+
+        // Combine the Guardian's name with their song list
         const playlistString = `Playlist for ${guardianName}:\n${songsList}`;
+
+        // Return the combined string
         return playlistString;
+
     }).join('\n\n');
 
+    // Print all the playlists to the console
     console.log(displayPlaylists);
 
 
