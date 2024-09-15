@@ -51,8 +51,15 @@ const generatePlaylist = (guardians, songs) => {
     })
 
 }
-    
+    // ONLY CHANGE THIS BELOW
 // Call generatePlaylist and display the playlists for each Guardian
-    generatePlaylist(guardians, songs);
+    const playlists = generatePlaylist(guardians, songs);
+
+    const displayPlaylists = playlists.map(({guardianName, playlist}) => {
+        const songsList = playlist
+        .map(song => `- ${song.title} by ${song.artist}`)
+        .join('\n');
+    })
+
 
 
