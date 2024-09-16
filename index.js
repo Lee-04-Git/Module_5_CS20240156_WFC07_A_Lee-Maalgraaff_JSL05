@@ -51,7 +51,7 @@ const generatePlaylist = (guardians, songs) => {
     })
 
 }
-    // ONLY CHANGE THIS BELOW
+
 // Call generatePlaylist and display the playlists for each Guardian
     const playlists = generatePlaylist(guardians, songs);
 
